@@ -38,3 +38,4 @@ $DEV/install.sh
 ## Improvements
 - [ ] Move step 3 into `install.sh` itself. This enables script to be idempotent
 - [ ] Abstract plugin/theme links in `install-plugins.sh` and `install-themes.sh` behind variables. This will promote DRY and reusability
+- [ ] Include Monokai Pro (Ristretto Filter) theme

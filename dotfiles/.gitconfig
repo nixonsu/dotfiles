@@ -2,7 +2,7 @@
 	name = ni-xon
 	email = nixon.s.uch@gmail.com
 [includeIf "gitdir:~/work/"]
-    path = ~/work/.gitconfig
+    	path = ~/work/.gitconfig
 [alias]
 	s = status -s
 	co = checkout
