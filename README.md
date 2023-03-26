@@ -35,6 +35,15 @@ $DEV/install.sh
 
 7. Restart shell and viola!
 
+## Configuration Updates
+1. Make changes to `dev-config`
+2. Commit and push
+2. Run installation script to apply changes to local
+- This will recreate and update all local symlinks
+```zsh
+$DEV/install.sh
+```
+
 ## Improvements
 - [ ] Move step 3 into `install.sh` itself. This enables script to be idempotent
 - [ ] Abstract plugin/theme links in `install-plugins.sh` and `install-themes.sh` behind variables. This will promote DRY and reusability
