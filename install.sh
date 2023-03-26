@@ -6,6 +6,7 @@ if [ ! -L "$HOME/.oh-my-zsh/custom" ]; then
   ln -s "$DEV/oh-my-zsh/custom" "$HOME/.oh-my-zsh/custom"
 fi
 ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
+ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
 echo 'Done.'
