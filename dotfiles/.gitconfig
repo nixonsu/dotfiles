@@ -1,0 +1,12 @@
+[user]
+	name = ni-xon
+	email = nixon.s.uch@gmail.com
+[alias]
+	s = status
+	co = checkout
+	cm = commit
+	pl = pull
+	ps = push
+	st = stash
+	a = add
+	rest = restore
