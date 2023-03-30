@@ -1,9 +1,8 @@
+# Open this file
+alias galiases='vim ~/dev-config/oh-my-zsh/custom/git.zsh'
+
 # Delete all local branches except main or master
 alias gbr='git branch | grep -v "main\|master" | xargs git branch -D'
-
-# Switch to personal profile
-alias gpersonal='git config user.name "ni-xon"; git config user.email "nixon.s.uch@gmail.com"'
-
 alias gs='git status -s'
 alias gc='git commit'
 alias gca='git commit -a'
