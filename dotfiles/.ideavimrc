@@ -1,1 +1,16 @@
 source ~/.vimrc
+
+" register leader
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" navigation
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+
+" run stuff
+:map <leader>cg <Action>(ChooseRunConfiguration)
+:map <leader>dg <Action>(ChooseDebugConfiguration)
+:map <leader>1 <Action>(Run)
+:map <leader>2 <Action>(Debug)
+:map <leader>0 <Action>(Stop)
