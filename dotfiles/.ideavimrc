@@ -9,8 +9,37 @@ nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
 " run stuff
-:map <leader>cg <Action>(ChooseRunConfiguration)
+:map <leader>rg <Action>(ChooseRunConfiguration)
 :map <leader>dg <Action>(ChooseDebugConfiguration)
 :map <leader>1 <Action>(Run)
 :map <leader>2 <Action>(Debug)
 :map <leader>0 <Action>(Stop)
+
+" code refactoring
+:map <leader>r <Action>(RenameElement)
+:map <leader>R <Action>(Refactorings.QuickListPopupAction)
+:map <leader>fc <Action>(ReformatCode)
+:map <leader>sw <Action>(SurroundWith)
+:map <leader>oi <Action>(OptimizeImports)
+
+" breakpoints
+:map <leader>bb <Action>(ToggleLineBreakpoint)
+:map <leader>bs <Action>(ViewBreakpoints)
+:map <leader>br <Action>(Debugger.RemoveAllBreakpoints)
+
+:map g, <Action>(JumpToLastChange)
+:map g. <Action>(JumpToNextChange)
+:nmap g) <Action>(GotoNextElementUnderCaretUsage)
+:nmap g( <Action>(GotoPrevElementUnderCaretUsage)
+:map <leader>pw <Action>(SelectInProjectView)
+:map <leader>hu <Action>(HighlightUsagesInFile)
+
+" splits
+:nmap <leader>v <Action>(PrevSplitter)
+:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
+:nmap <c-v> <Action>(SplitVertically)
+
+
+" source
+:map <leader>9 :source ~/.ideavimrc<CR>
+
