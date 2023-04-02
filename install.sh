@@ -9,6 +9,7 @@ ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
+ln -sf $DEV/colorschemes/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
 # Install powerlevel10k theme
