@@ -3,7 +3,7 @@ alias galiases='vim ~/dev-config/oh-my-zsh/custom/git.zsh'
 
 # Delete all local branches except main or master
 alias gbr='git branch | grep -v "main\|master" | xargs git branch -D'
-alias gs='git status -s'
+alias gs='(git fetch &>/dev/null &); git status -s'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
