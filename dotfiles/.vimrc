@@ -1,3 +1,5 @@
+" Set leader key
+let mapleader = " "
 " Turn on syntax highlighting
 syntax on
 colorscheme monokai
@@ -7,7 +9,7 @@ set relativenumber number
 nnoremap H gT
 nnoremap L gt
 " Toggle relative line number using ctrl-L twice
-nmap <C-L><C-L> :set invrelativenumber<CR>
+nnoremap <C-L><C-L> :set invrelativenumber<CR>
 " Incrementally search while typing
 set incsearch
 " Use smart case for searching
@@ -21,3 +23,13 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 set ts=2 sw=2
+
+" Move code blocks when highlighted
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Map copy/paste to system clipboard
+nnoremap <leader>y "*y
+vnoremap <leader>y "*y
+nnoremap <leader>p "*p
+vnoremap <leader>p "*p
