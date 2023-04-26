@@ -117,6 +117,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Java version
+export JAVA_18_HOME=$(/usr/libexec/java_home -v18)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java18='export JAVA_HOME=$JAVA_18_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+
+#default java8
+export JAVA_HOME=$JAVA_18_HOME
+
 # Dev config folder
 export DEV="$HOME/dev-config"
 
