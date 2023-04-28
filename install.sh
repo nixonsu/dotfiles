@@ -1,3 +1,9 @@
+# Clearing default settings
+echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
+rm -rf $HOME/.oh-my-zsh/custom
+rm -rf $HOME/.tmux/plugins
+echo 'Done.'
+
 # Create and overwrite symlinks
 # WARNING: THIS WILL OVERWRITE EXISTING FILES
 echo 'Creating symlinks...'
@@ -5,11 +11,14 @@ echo 'Creating symlinks...'
 if [ ! -L "$HOME/.oh-my-zsh/custom" ]; then
   ln -s "$DEV/oh-my-zsh/custom" "$HOME/.oh-my-zsh/custom"
 fi
+if [ ! -L "$HOME/.tmux/plugins/tpm" ] && [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+	mkdir -p "$HOME/.tmux/plugins"
+  ln -s "$DEV/tmux/plugins/tpm" "$HOME/.tmux/plugins/tpm"
+fi
 ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
-ln -sf $DEV/tmux/plugins/tpm ~/.tmux/plugins/tpm
 ln -sf $DEV/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf $DEV/colorschemes/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
