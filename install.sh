@@ -20,3 +20,8 @@ installp10k
 # Install zsh plugins
 source $DEV/oh-my-zsh/custom/install-plugins.zsh
 installplugins
+
+# Install misc via brew
+source $DEV/oh-my-zsh/custom/install-with-brew.zsh
+installwithbrew
+

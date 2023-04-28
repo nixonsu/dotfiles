@@ -12,28 +12,23 @@ brew install iterm2
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-3. Remove oh-my-zsh default `custom` folder
-```zsh
-rm -rf ~/.oh-my-zsh/custom
-```
-
-4. Clone this repo into ~
+3. Clone this repo into ~
 ```zsh
 git clone git@github.com:ni-xon/dev-config.git ~
 ```
 
-5. Temporarily set DEV environment variable for the install to work
+4. Temporarily set DEV environment variable for the install to work
 ```zsh
 export DEV="$HOME/dev-config"
 ```
 
-6. Run installation script
+5. Run installation script
 - This creates symlinks and installs zsh custom plugins & themes
 ```zsh
 $DEV/install.sh
 ```
 
-7. Restart shell and viola!
+6. Restart shell and viola!
 
 ## Configuration Updates
 1. Make changes to `dev-config`
@@ -44,10 +39,10 @@ $DEV/install.sh
 $DEV/install.sh
 ```
 
-## Other installations
-- **Git-delta** `brew install git-delta`
+## Additional setup
+1. Set `tmux attach -t base || tmux new -s base` to run everytime iTerm2 is booted - see [here](https://www.youtube.com/watch?v=FbKpN7c2aX8&ab_channel=BenjaminTan) for tutorial.
 
 ## Improvements
-- [ ] Move step 3 into `install.sh` itself. This enables script to be idempotent
+- [x] Move step 3 into `install.sh` itself. This enables script to be idempotent
 - [ ] Abstract plugin/theme links in `install-plugins.sh` and `install-themes.sh` behind variables. This will promote DRY and reusability
 - [x] Include Monokai Pro (Ristretto Filter) theme
