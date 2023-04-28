@@ -9,6 +9,7 @@ ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
+ln -sf $DEV/tmux/plugins/tpm ~/.tmux/plugins/tpm
 ln -sf $DEV/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf $DEV/colorschemes/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
@@ -20,6 +21,10 @@ installp10k
 # Install zsh plugins
 source $DEV/oh-my-zsh/custom/install-plugins.zsh
 installplugins
+
+# Install tpm
+source $DEV/tmux/install-tpm.zsh 
+installtpm
 
 # Install misc via brew
 source $DEV/oh-my-zsh/custom/install-with-brew.zsh
