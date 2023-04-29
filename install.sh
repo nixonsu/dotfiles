@@ -20,6 +20,7 @@ ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
 ln -sf $DEV/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $DEV/dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -sf $DEV/colorschemes/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
