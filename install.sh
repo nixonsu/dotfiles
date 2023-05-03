@@ -2,6 +2,7 @@
 echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
 rm -rf $HOME/.oh-my-zsh/custom
 rm -rf $HOME/.tmux/plugins
+rm -rf $HOME/.config/nvim
 echo 'Done.'
 
 # Create and overwrite symlinks
@@ -14,6 +15,10 @@ fi
 if [ ! -L "$HOME/.tmux/plugins/tpm" ] && [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 	mkdir -p "$HOME/.tmux/plugins"
   ln -s "$DEV/tmux/plugins/tpm" "$HOME/.tmux/plugins/tpm"
+fi
+if [ ! -L "$HOME/.config/nvim" ] && [ ! -d "$HOME/.config/nvim" ]; then
+	mkdir -p "$HOME/.config"
+  ln -s "$DEV/nvim" "$HOME/.config/nvim"
 fi
 ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
