@@ -1,5 +1,5 @@
 # Open this file
-alias galiases='vim ~/dev-config/oh-my-zsh/custom/git.zsh'
+alias git-aliases='vim ~/dev-config/oh-my-zsh/custom/git.zsh'
 
 # Delete all local branches except main or master
 alias gbr='git branch | grep -v "main\|master" | xargs git branch -D'
@@ -18,3 +18,4 @@ alias gb='git branch'
 alias grpo='git remote prune origin'
 alias gst='git stash'
 alias gcl='git clone'
+alias grev='git revert'
