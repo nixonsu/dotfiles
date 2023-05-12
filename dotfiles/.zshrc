@@ -119,12 +119,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # Java version
 export JAVA_18_HOME=$(/usr/libexec/java_home -v18)
+export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 
 alias java18='export JAVA_HOME=$JAVA_18_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
+alias java15='export JAVA_HOME=$JAVA_15_HOME'
 
-#default java8
+#default java18
 export JAVA_HOME=$JAVA_18_HOME
 
 # Dev config folder
