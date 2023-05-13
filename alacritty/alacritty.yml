@@ -1,0 +1,21 @@
+live_config_reload: true
+
+window:
+  opacity: 0.85
+  padding:
+    x: 18
+    y: 16
+  dynamic_padding: false
+  decorations: buttonless
+
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Regular
+  size: 14
+
+shell:
+  program: /bin/bash
+  args:
+    - -c
+    - tmux attach -t base || tmux new -s base
