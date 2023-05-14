@@ -1,8 +1,6 @@
 # Clearing default settings
 echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
 rm -rf $HOME/.oh-my-zsh/custom
-rm -rf $HOME/.tmux/plugins
-rm -rf $HOME/.config/nvim
 rm -rf $HOME/.config/alacritty
 echo 'Done.'
 
