@@ -21,3 +21,6 @@ alias gcl='git clone'
 alias grev='git revert'
 # Open current branch in github
 alias ghub='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD )'
+
+# Alias for lazygit
+alias lg='lazygit'
