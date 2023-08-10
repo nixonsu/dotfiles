@@ -117,18 +117,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Java version
-export JAVA_18_HOME=$(/usr/libexec/java_home -v18)
-export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-
-alias java18='export JAVA_HOME=$JAVA_18_HOME'
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
-alias java15='export JAVA_HOME=$JAVA_15_HOME'
-
-#default java18
-export JAVA_HOME=$JAVA_18_HOME
-
 # Dev config folder
 export DEV="$HOME/dev-config"
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
