@@ -23,22 +23,29 @@ nnoremap gE :action GotoPreviousError<CR>
 :map <leader>oi <Action>(OptimizeImports)
 
 " breakpoints
-:map <leader>bb <Action>(ToggleLineBreakpoint)
-:map <leader>bs <Action>(ViewBreakpoints)
+:map <leader>bp <Action>(ToggleLineBreakpoint)
+:map <leader>bv <Action>(ViewBreakpoints)
 :map <leader>br <Action>(Debugger.RemoveAllBreakpoints)
 
 :map g, <Action>(JumpToLastChange)
 :map g. <Action>(JumpToNextChange)
 :nmap g) <Action>(GotoNextElementUnderCaretUsage)
 :nmap g( <Action>(GotoPrevElementUnderCaretUsage)
-:map <leader>pw <Action>(SelectInProjectView)
+:map <leader>pv <Action>(SelectInProjectView)
 :map <leader>hu <Action>(HighlightUsagesInFile)
+
+" display
+:nmap <leader>= <Action>(QuickJavaDoc)
+
+" tab manipulation
+:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
+" given single pane, moves current tab into new vertical pane
+:nmap <leader>mi <c-v><leader>v<leader>mo
 
 " splits
 :nmap <leader>v <Action>(PrevSplitter)
-:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
-:nmap <c-v> <Action>(SplitVertically)
-
+:nmap <leader>\ <Action>(SplitVertically)
+:nmap <leader>- <Action>(SplitHorizontally)
 
 " source
 :map <leader>9 :source ~/.ideavimrc<CR>
