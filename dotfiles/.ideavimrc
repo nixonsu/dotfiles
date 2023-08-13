@@ -37,15 +37,15 @@ nnoremap gE :action GotoPreviousError<CR>
 " display
 :nmap <leader>= <Action>(QuickJavaDoc)
 
-" tab manipulation
-:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
-" given single pane, moves current tab into new vertical pane
-:nmap <leader>mi <c-v><leader>v<leader>mo
-
 " splits
 :nmap <leader>v <Action>(PrevSplitter)
 :nmap <leader>\ <Action>(SplitVertically)
 :nmap <leader>- <Action>(SplitHorizontally)
+
+" tab manipulation
+:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
+" given single pane, moves current tab into new vertical pane
+:nmap <leader>mi <leader>\\<leader>v<leader>mo
 
 " source
 :map <leader>9 :source ~/.ideavimrc<CR>
