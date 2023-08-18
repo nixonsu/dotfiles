@@ -33,6 +33,7 @@ nnoremap gE :action GotoPreviousError<CR>
 :nmap g( <Action>(GotoPrevElementUnderCaretUsage)
 :map <leader>pv <Action>(SelectInProjectView)
 :map <leader>hu <Action>(HighlightUsagesInFile)
+:nmap gi <Action>(GotoImplementation)
 
 " display
 :nmap <leader>= <Action>(QuickJavaDoc)
