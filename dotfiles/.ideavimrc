@@ -21,6 +21,8 @@ nnoremap gE :action GotoPreviousError<CR>
 :map <leader>fc <Action>(ReformatCode)
 :map <leader>sw <Action>(SurroundWith)
 :map <leader>oi <Action>(OptimizeImports)
+:map <leader>v <Action>(IntroduceVariable)
+:map <leader>m <Action>(ExtractMethod)
 
 " breakpoints
 :map <leader>bp <Action>(ToggleLineBreakpoint)
@@ -39,7 +41,7 @@ nnoremap gE :action GotoPreviousError<CR>
 :nmap <leader>= <Action>(QuickJavaDoc)
 
 " splits
-:nmap <leader>v <Action>(PrevSplitter)
+:nmap <leader>s <Action>(PrevSplitter)
 :nmap <leader>\ <Action>(SplitVertically)
 :nmap <leader>- <Action>(SplitHorizontally)
 
