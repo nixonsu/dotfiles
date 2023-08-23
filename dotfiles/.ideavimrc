@@ -18,12 +18,15 @@ nnoremap gE :action GotoPreviousError<CR>
 " code refactoring
 :map <leader>r <Action>(RenameElement)
 :map <leader>R <Action>(Refactorings.QuickListPopupAction)
+:map <leader>m <Action>(Move)
 :map <leader>fc <Action>(ReformatCode)
 :map <leader>sw <Action>(SurroundWith)
 :map <leader>oi <Action>(OptimizeImports)
-:map <leader>ev <Action>(IntroduceVariable)
+:map <leader>iv <Action>(IntroduceVariable)
 :map <leader>em <Action>(ExtractMethod)
 :map <leader>ic <Action>(IntroduceConstant)
+:map <leader>if <Action>(IntroduceField)
+:map <leader>ip <Action>(IntroduceParameter)
 
 " breakpoints
 :map <leader>bp <Action>(ToggleLineBreakpoint)
