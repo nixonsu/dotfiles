@@ -2,6 +2,7 @@
 echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
 rm -rf $HOME/.oh-my-zsh/custom
 rm -rf $HOME/.config/alacritty
+rm -rf $HOME/.config/karabiner
 echo 'Done.'
 
 # Create and overwrite symlinks
@@ -22,6 +23,10 @@ fi
 if [ ! -L "$HOME/.config/alacritty" ] && [ ! -d "$HOME/.config/alacritty" ]; then
 	mkdir -p "$HOME/.config"
   ln -s "$DEV/alacritty" "$HOME/.config/alacritty"
+fi
+if [ ! -L "$HOME/.config/karabiner" ] && [ ! -d "$HOME/.config/karabiner" ]; then
+	mkdir -p "$HOME/.config"
+  ln -s "$DEV/karabiner" "$HOME/.config/karabiner"
 fi
 ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
