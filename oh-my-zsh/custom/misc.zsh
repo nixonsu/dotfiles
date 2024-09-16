@@ -7,3 +7,5 @@ alias idear='open -a "Rider" --args $(find_solution_or_project)'
 
 # sleep macos
 alias sl='pmset sleepnow'
+alias ld='lazydocker'
+
