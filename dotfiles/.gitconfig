@@ -1,8 +1,8 @@
 [user]
-	name = ni-xon
+	name = nixonsu
 	email = nixon.s.uch@gmail.com
-[includeIf "gitdir:~/work/"]
-    	path = ~/work/.gitconfig
+[includeIf "gitdir:~/repos/work/"]
+    	path = ~/repos/work/.gitconfig
 [alias]
 	s = status -s
 	co = checkout
