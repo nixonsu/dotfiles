@@ -1,59 +1,237 @@
+"View breakpoints" Base Settings
+"" ========================================================
 source ~/.vimrc
+set scrolloff=10
+set relativenumber
+set showmode
+set showcmd
 
-" register leader
-nnoremap <SPACE> <Nop>
+set smartcase
+set incsearch
+set hlsearch
+
+set visualbell
+
+" Use system clipboard
+set clipboard+=unnamed   
+
 let mapleader = " "
 
-" navigation
-nnoremap ge :action GotoNextError<CR>
-nnoremap gE :action GotoPreviousError<CR>
 
-" run stuff
-:map <leader>rg <Action>(ChooseRunConfiguration)
-:map <leader>dg <Action>(ChooseDebugConfiguration)
-:map <leader>1 <Action>(Run)
-:map <leader>2 <Action>(Debug)
-:map <leader>0 <Action>(Stop)
+"" Plugin Settings
+"" ========================================================
 
-" code refactoring
-:map <leader>r <Action>(RenameElement)
-:map <leader>R <Action>(Refactorings.QuickListPopupAction)
-:map <leader>m <Action>(Move)
-:map <leader>fc <Action>(ReformatCode)
-:map <leader>sw <Action>(SurroundWith)
-:map <leader>oi <Action>(OptimizeImports)
-:map <leader>iv <Action>(IntroduceVariable)
-:map <leader>em <Action>(ExtractMethod)
-:map <leader>ic <Action>(IntroduceConstant)
-:map <leader>if <Action>(IntroduceField)
-:map <leader>ip <Action>(IntroduceParameter)
+set surround
+set highlightedyank
+set nerdtree
 
-" breakpoints
-:map <leader>bp <Action>(ToggleLineBreakpoint)
-:map <leader>bv <Action>(ViewBreakpoints)
-:map <leader>br <Action>(Debugger.RemoveAllBreakpoints)
+" Which-key settings
+set which-key
+set notimeout
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
 
-:map g, <Action>(JumpToLastChange)
-:map g. <Action>(JumpToNextChange)
-:nmap g) <Action>(GotoNextElementUnderCaretUsage)
-:nmap g( <Action>(GotoPrevElementUnderCaretUsage)
-:map <leader>pv <Action>(SelectInProjectView)
-:map <leader>hu <Action>(HighlightUsagesInFile)
-:nmap gi <Action>(GotoImplementation)
+let g:WhichKeyDesc_leader = "<leader> Leader key"
 
-" display
-:nmap <leader>= <Action>(QuickJavaDoc)
+let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
 
-" splits
-:nmap <leader>s <Action>(PrevSplitter)
-:nmap <leader>\ <Action>(SplitVertically)
-:nmap <leader>- <Action>(SplitHorizontally)
+let g:WhichKeyDesc_comment = "<leader>c Comment line"
 
-" tab manipulation
-:nmap <leader>mo <Action>(MoveEditorToOppositeTabGroup)
+let g:WhichKeyDesc_fold = "<leader>z Folding"
+let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
+let g:WhichKeyDesc_unfold_all = "<leader>zo Unfold all regions"
+
+let g:WhichKeyDesc_window = "<leader>w Window splits"
+let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
+let g:WhichKeyDesc_window_split_horizontally = "<leader>wh Split horizontally"
+let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
+let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
+
+let g:WhichKeyDesc_breakpoints = "<leader>b Breakpoints"
+let g:WhichKeyDesc_breakpoints_toggle = "<leader>bt Toggle breakpoints"
+let g:WhichKeyDesc_breakpoints_view = "<leader>bv View breakpoints"
+let g:WhichKeyDesc_breakpoints_remove_all = "<leader>br Remove all breakpoints"
+
+
+let g:WhichKeyDesc_display = "<leader>d Display options"
+let g:WhichKeyDesc_zen_mode = "<leader>dz Toggle Zen mode"
+let g:WhichKeyDesc_df_mode = "<leader>dd Toggle Distraction-Free mode"
+let g:WhichKeyDesc_fullscreen = "<leader>df Toggle full screen"
+
+let g:WhichKeyDesc_action= "<leader>a Actions"
+let g:WhichKeyDesc_action_context_menu = "<leader>am Open context menu"
+let g:WhichKeyDesc_action_search = "<leader>as Open command modal"
+
+let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
+
+let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
+let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
+let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
+let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
+let g:WhichKeyDesc_file_move = "<leader>fm Move file"
+let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
+
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+let g:WhichKeyDesc_refactoring_optimise_imports = "<leader>ro Optimise imports"
+let g:WhichKeyDesc_refactoring_reformat_code = "<leader>rc Reformat code"
+let g:WhichKeyDesc_refactoring_parameter = "<leader>rp Introduce parameter"
+
+let g:WhichKeyDesc_goto = "<leader>g Go to X"
+let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
+let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
+let g:WhichKeyDesc_goto_implementation = "<leader>gi Go to Implementation"
+let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
+let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
+let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
+let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
+
+let g:WhichKeyDesc_git = "<leader>g Git operations"
+let g:WhichKeyDesc_git_commit = "<leader>gc Open Git commit dialog"
+let g:WhichKeyDesc_git_status = "<leader>gs Open Git status dialog"
+let g:WhichKeyDesc_git_branches = "<leader>gb Open Git branches list"
+
+let g:WhichKeyDesc_errors = "<leader>e Error navigation"
+let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
+let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
+
+let g:WhichKeyDesc_stop = "<leader>0 Stop"
+let g:WhichKeyDesc_run = "<leader>1 Run"
+let g:WhichKeyDesc_debug = "<leader>2 Debug"
+let g:WhichKeyDesc_source = "<leader>9 Source .ideavimrc"
+
+let g:WhichKeyDesc_javadoc = "<leader>= JavaDoc"
+
+"" Key mappings
+"" ========================================================
+
+" Tab navigation
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprev<CR>
+
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+
+" Jump between methods
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Execute macro saved in 'q' register
+nnoremap qj @q
+
+" Popup navigation
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+
+"" Leader commands
+"" ========================================================
+
+" Comment lines c
+map <leader>c <action>(CommentByLineComment)
+
+" Open NERDTree (use q to exit)
+map <leader>x :NERDTreeToggle<CR>
+
+" Folding z
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+" Window splits w
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Display options d
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>dz <action>(ToggleZenMode)
+map <leader>df <action>(ToggleFullScreen)
+
+" Actions a
+map <leader>am <action>(ShowIntentionActions)
+map <leader>as <action>(SearchEverywhere)
+
+" File navigation f
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>fl <action>(RecentLocations)
+map <leader>fs <action>(NewScratchFile)
+map <leader>fm <Action>(Move)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" Refactoring r
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Optimize imports
+map <leader>ro <Action>(OptimizeImports)
+map <leader>rc <Action>(IntroduceConstant)
+map <leader>rp <Action>(IntroduceParameter)
+map <leader>rc <Action>(ReformatCode)
+map <leader>rsw <Action>(SurroundWith)
+
+" Go to code g
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gb <Action>(Back)
+nmap <leader>gf <Action>(Forward)
+
+" Git windows g
+map <leader>gc <Action>(CheckinProject)
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+map <leader>gb <Action>(Git.Branches)
+
+" Errors e
+map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+
+" Run options o
+map <leader>or <Action>(ChooseRunConfiguration)
+map <leader>od <Action>(ChooseDebugConfiguration)
+map <leader>1 <Action>(Run)
+map <leader>2 <Action>(Debug)
+map <leader>0 <Action>(Stop)
+
+" Breakpoints b
+map <leader>bt <Action>(ToggleLineBreakpoint)
+map <leader>bv <Action>(ViewBreakpoints)
+map <leader>br <Action>(Debugger.RemoveAllBreakpoints)
+
+" Docs
+nmap <leader>= <Action>(QuickJavaDoc)
+
 " given single pane, moves current tab into new vertical pane
-:nmap <leader>mi <leader>\\<leader>v<leader>mo
+nmap <leader>mi <leader>\\<leader>v<leader>mo
 
-" source
-:map <leader>9 :source ~/.ideavimrc<CR>
+" Re-source
+map <leader>9 :source ~/.ideavimrc<CR>
+
+map <leader>pv <Action>(SelectInProjectView)
 
