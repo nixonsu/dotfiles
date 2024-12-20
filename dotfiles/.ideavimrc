@@ -35,7 +35,10 @@ let g:WhichKey_SortOrder = "by_key_prefix_first"
 
 let g:WhichKeyDesc_leader = "<leader> Leader key"
 
-let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
+let g:WhichKeyDesc_explorer = "<leader>x File explorer"
+let g:WhichKeyDesc_explorer_focus = "<leader>x Focus file explorer"
+let g:WhichKeyDesc_explorer_toggle = "<leader>xx Toggle file explorer"
+let g:WhichKeyDesc_explorer_view_file = "<leader>xf View file in explorer"
 
 let g:WhichKeyDesc_comment = "<leader>c Comment line"
 
@@ -54,6 +57,9 @@ let g:WhichKeyDesc_breakpoints_toggle = "<leader>bt Toggle breakpoints"
 let g:WhichKeyDesc_breakpoints_view = "<leader>bv View breakpoints"
 let g:WhichKeyDesc_breakpoints_remove_all = "<leader>br Remove all breakpoints"
 
+let g:WhichKeyDesc_configurations = "<leader>o Configurations"
+let g:WhichKeyDesc_configurations_run = "<leader>or Edit run configuration"
+let g:WhichKeyDesc_configurations_debug = "<leader>od Edit debug configuration"
 
 let g:WhichKeyDesc_display = "<leader>d Display options"
 let g:WhichKeyDesc_zen_mode = "<leader>dz Toggle Zen mode"
@@ -74,7 +80,7 @@ let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent loca
 let g:WhichKeyDesc_file_move = "<leader>fm Move file"
 let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
 
-let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring"
 let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
 let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
 let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
@@ -94,10 +100,10 @@ let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
 let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
 let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
 
-let g:WhichKeyDesc_git = "<leader>g Git operations"
-let g:WhichKeyDesc_git_commit = "<leader>gc Open Git commit dialog"
-let g:WhichKeyDesc_git_status = "<leader>gs Open Git status dialog"
-let g:WhichKeyDesc_git_branches = "<leader>gb Open Git branches list"
+let g:WhichKeyDesc_git = "<leader>gi Git operations"
+let g:WhichKeyDesc_git_commit = "<leader>gic Open Git commit dialog"
+let g:WhichKeyDesc_git_status = "<leader>gis Open Git status dialog"
+let g:WhichKeyDesc_git_branches = "<leader>gib Open Git branches list"
 
 let g:WhichKeyDesc_errors = "<leader>e Error navigation"
 let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
@@ -145,8 +151,10 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 " Comment lines c
 map <leader>c <action>(CommentByLineComment)
 
-" Open NERDTree (use q to exit)
-map <leader>x :NERDTreeToggle<CR>
+" Explorer / NERDTree
+map <leader>xx :NERDTreeToggle<CR>
+map <leader>x :NERDTreeFocus<CR>
+map <leader>xf <Action>(SelectInProjectView)
 
 " Folding z
 map <leader>zc :action CollapseAllRegions<CR>
@@ -204,9 +212,9 @@ nmap <leader>gb <Action>(Back)
 nmap <leader>gf <Action>(Forward)
 
 " Git windows g
-map <leader>gc <Action>(CheckinProject)
-map <leader>gs <Action>(ActivateVersionControlToolWindow)
-map <leader>gb <Action>(Git.Branches)
+map <leader>gic <Action>(CheckinProject)
+map <leader>gis <Action>(ActivateVersionControlToolWindow)
+map <leader>gib <Action>(Git.Branches)
 
 " Errors e
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
@@ -227,11 +235,7 @@ map <leader>br <Action>(Debugger.RemoveAllBreakpoints)
 " Docs
 nmap <leader>= <Action>(QuickJavaDoc)
 
-" given single pane, moves current tab into new vertical pane
-nmap <leader>mi <leader>\\<leader>v<leader>mo
-
 " Re-source
 map <leader>9 :source ~/.ideavimrc<CR>
 
-map <leader>pv <Action>(SelectInProjectView)
 
