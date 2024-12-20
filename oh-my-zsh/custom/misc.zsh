@@ -4,6 +4,8 @@ function find_solution_or_project {
 
 alias ideaj='open -a "IntelliJ IDEA Ultimate" .'
 alias idear='open -a "Rider" --args $(find_solution_or_project)'
+alias ideap='open -a "PyCharm" .'
+alias ideaw='open -a "WebStorm" .'
 
 # sleep macos
 alias sl='pmset sleepnow'
