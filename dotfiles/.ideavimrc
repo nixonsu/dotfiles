@@ -109,9 +109,9 @@ let g:WhichKeyDesc_errors = "<leader>e Error navigation"
 let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
 let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
 
-let g:WhichKeyDesc_stop = "<leader>0 Stop"
 let g:WhichKeyDesc_run = "<leader>1 Run"
 let g:WhichKeyDesc_debug = "<leader>2 Debug"
+let g:WhichKeyDesc_stop = "<leader>3 Stop"
 let g:WhichKeyDesc_source = "<leader>9 Source .ideavimrc"
 
 let g:WhichKeyDesc_javadoc = "<leader>= JavaDoc"
@@ -225,7 +225,7 @@ map <leader>or <Action>(ChooseRunConfiguration)
 map <leader>od <Action>(ChooseDebugConfiguration)
 map <leader>1 <Action>(Run)
 map <leader>2 <Action>(Debug)
-map <leader>0 <Action>(Stop)
+map <leader>3 <Action>(Stop)
 
 " Breakpoints b
 map <leader>bt <Action>(ToggleLineBreakpoint)
