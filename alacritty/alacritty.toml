@@ -29,7 +29,7 @@ size = 14
 family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux attach || tmux"]
 program = "/bin/zsh"
 
@@ -41,4 +41,6 @@ opacity = 0.85
 [window.padding]
 x = 18
 y = 16
+
+[terminal]
 
