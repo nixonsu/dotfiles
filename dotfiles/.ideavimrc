@@ -92,10 +92,6 @@ let g:WhichKeyDesc_refactoring_reformat_code = "<leader>rc Reformat code"
 let g:WhichKeyDesc_refactoring_parameter = "<leader>rp Introduce parameter"
 
 let g:WhichKeyDesc_goto = "<leader>g Go to X"
-let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
-let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
-let g:WhichKeyDesc_goto_implementation = "<leader>gi Go to Implementation"
-let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
 let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
 let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
 let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
@@ -203,10 +199,10 @@ map <leader>rc <Action>(ReformatCode)
 map <leader>rsw <Action>(SurroundWith)
 
 " Go to code g
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gu <Action>(ShowUsages)
+nmap gd <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gb <Action>(Back)
 nmap <leader>gf <Action>(Forward)
