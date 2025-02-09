@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 - Tech/System Design/Back of the envelope estimations.md",
+                "file": "00 - Tech/Interviewing/3. SCL Interview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Back of the envelope estimations"
+              "title": "3. SCL Interview"
             }
           }
         ]
@@ -180,6 +180,10 @@
   },
   "active": "5173d738437f0f0d",
   "lastOpenFiles": [
+    "00 - Tech/Interviewing/Story Bank.md",
+    "00 - Tech/AWS/Storage.md",
+    "00 - Tech/Interviewing/Canva Final Round B2B Interviews.md",
+    "00 - Tech/System Design/Back of the envelope estimations.md",
     "l.md",
     "00 - Tech/JVM/Java Streams.md",
     "04 - Personal/Guitar/Strumming Patterns.md",
@@ -202,10 +206,6 @@
     "07 - Projects/Side hustle ideas.md",
     "07 - Projects/Personal Website 2.0.md",
     "00 - Tech/System Design/Caching.md",
-    "00 - Tech/System Design/Scaling Databases.md",
-    "00 - Tech/System Design/Load Balancers.md",
-    "00 - Tech/CMS.md",
-    "00 - Tech/Execution Stack.md",
     "Tech/Interviewing/Canva",
     "_/Excalidraw/Back of the envelope estimations 2025-02-09 18.32.32.svg",
     "00 - Tech/Design Patterns",
