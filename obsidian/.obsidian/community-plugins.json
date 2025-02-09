@@ -6,5 +6,11 @@
   "obsidian-relative-line-numbers",
   "table-editor-obsidian",
   "quickadd",
-  "global-search-and-replace"
+  "global-search-and-replace",
+  "obsidian-icon-folder",
+  "settings-search",
+  "obsidian-completr",
+  "url-into-selection",
+  "calendar",
+  "omnisearch"
 ]

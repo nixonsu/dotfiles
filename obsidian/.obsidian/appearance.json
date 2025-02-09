@@ -1,5 +1,10 @@
 {
   "accentColor": "",
   "cssTheme": "",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [
+    "Colored Sidebar Items"
+  ],
+  "translucency": true,
+  "showViewHeader": true,
+  "monospaceFontFamily": "JetBrainsMono Nerd Font"
 }
