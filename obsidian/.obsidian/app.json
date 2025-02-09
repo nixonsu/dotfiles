@@ -1,0 +1,10 @@
+{
+  "vimMode": true,
+  "promptDelete": false,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Attachments",
+  "userIgnoreFilters": [
+    ".*\\.svg$"
+  ]
+}

@@ -31,7 +31,8 @@ fi
 
 ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
 ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
-ln -sf $DEV/dotfiles/.obsidian.vimrc ~/Documents/Obsidian/Vault/.obsidian.vimrc
+ln -sf $DEV/obsidian/.obsidian.vimrc ~/Documents/Obsidian/Vault/.obsidian.vimrc
+ln -sf $DEV/obsidian/.obsidian ~/Documents/Obsidian/Vault/.obsidian
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
 ln -sf $DEV/dotfiles/.tmux.conf ~/.tmux.conf
