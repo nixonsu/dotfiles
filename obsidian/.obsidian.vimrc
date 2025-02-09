@@ -57,6 +57,10 @@ map <Space>p :pasteinto<CR>
 exmap vsplit obcommand workspace:split-vertical
 nmap <Space>v :vsplit<CR>
 
+" Toggle calendar
+exmap trightbar obcommand app:toggle-right-sidebar
+nmap <Space>c :trightbar<CR>
+
 " exmap hsplit obcommand workspace:split-horizontal
 " nmap <Space>h :hsplit<CR>
 
