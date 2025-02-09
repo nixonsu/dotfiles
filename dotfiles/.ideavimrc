@@ -35,10 +35,7 @@ let g:WhichKey_SortOrder = "by_key_prefix_first"
 
 let g:WhichKeyDesc_leader = "<leader> Leader key"
 
-let g:WhichKeyDesc_explorer = "<leader>x File explorer"
-let g:WhichKeyDesc_explorer_focus = "<leader>x Focus file explorer"
-let g:WhichKeyDesc_explorer_toggle = "<leader>xx Toggle file explorer"
-let g:WhichKeyDesc_explorer_view_file = "<leader>xf View file in explorer"
+let g:WhichKeyDesc_explorer_view_file = "<leader>pv View file in explorer"
 
 let g:WhichKeyDesc_comment = "<leader>c Comment line"
 
@@ -51,6 +48,7 @@ let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
 let g:WhichKeyDesc_window_split_horizontally = "<leader>wh Split horizontally"
 let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
 let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
+let g:WhichKeyDesc_window_split_prev_splitter = "<leader>ww Move to previous splitter"
 
 let g:WhichKeyDesc_breakpoints = "<leader>b Breakpoints"
 let g:WhichKeyDesc_breakpoints_toggle = "<leader>bt Toggle breakpoints"
@@ -148,9 +146,7 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 map <leader>c <action>(CommentByLineComment)
 
 " Explorer / NERDTree
-map <leader>xx :NERDTreeToggle<CR>
-map <leader>x :NERDTreeFocus<CR>
-map <leader>xf <Action>(SelectInProjectView)
+map <leader>pv <Action>(SelectInProjectView)
 
 " Folding z
 map <leader>zc :action CollapseAllRegions<CR>
@@ -161,6 +157,7 @@ map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>ww <Action>(PrevSplitter)
 
 " Display options d
 map <leader>dd <action>(ToggleDistractionFreeMode)
