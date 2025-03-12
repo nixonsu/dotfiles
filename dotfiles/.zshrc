@@ -12,6 +12,7 @@ fi
 source ~/.oh-my-zsh/custom/plugins.zsh
 
 # Path to your oh-my-zsh installation.
+DISABLE_AUTO_UPDATE="true"
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
