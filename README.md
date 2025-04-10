@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 2. Clone this repo into ~
 ```zsh
-git clone git@github.com:ni-xon/dev-config.git ~
+git clone git@github.com:nixonsu/dotfiles.git ~
 ```
 
 3. Temporarily set DEV environment variable for the install to work
