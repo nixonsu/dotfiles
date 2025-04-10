@@ -1,16 +1,16 @@
 brew "git-delta"
 brew "tmux"
 brew "neovim"
-brew "alacritty"
+cask "alacritty"
 brew "fzf"
-brew "karabiner-elements"
+cask "karabiner-elements"
 brew "k9s"
-brew "obsidian"
-brew "scroll-reverser"
+cask "obsidian"
+cask "scroll-reverser"
 
 tap "jesseduffield/lazygit"
 brew "lazygit"
 
 brew "lazydocker"
-brew "shottr"
+cask "shottr"
 
