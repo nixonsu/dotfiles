@@ -13,6 +13,10 @@ nnoremap L gt
 " Toggle relative line number using ctrl-L twice
 nnoremap <C-L><C-L> :set invrelativenumber<CR>
 
+" Yank to system clipboard using <Leader>y
+nnoremap <Leader>y "+y
+vnoremap <Leader>y "+y
+
 " SEARCHING
 " Incrementally search while typing
 set incsearch
