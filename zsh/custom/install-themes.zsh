@@ -1,5 +1,5 @@
 function installp10k {
-  local p10k_dir="${DEV}/oh-my-zsh/custom/themes/powerlevel10k"
+  local p10k_dir="${DEV}/zsh/custom/themes/powerlevel10k"
   if [ -d "$p10k_dir" ]; then
     echo "Powerlevel10k directory already exists. Skipping clone."
   else

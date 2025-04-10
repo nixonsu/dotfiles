@@ -10,7 +10,7 @@ echo 'Done.'
 echo 'Creating symlinks...'
 # If a custom symlink already exists, skip
 if [ ! -L "$HOME/.oh-my-zsh/custom" ]; then
-  ln -s "$DEV/oh-my-zsh/custom" "$HOME/.oh-my-zsh/custom"
+  ln -s "$DEV/zsh/custom" "$HOME/.oh-my-zsh/custom"
 fi
 if [ ! -L "$HOME/.tmux/plugins/tpm" ] && [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 	mkdir -p "$HOME/.tmux/plugins"
@@ -40,11 +40,11 @@ ln -sf $DEV/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
 # Install powerlevel10k theme
-source $DEV/oh-my-zsh/custom/install-themes.zsh
+source $DEV/zsh/custom/install-themes.zsh
 installp10k
 
 # Install zsh plugins
-source $DEV/oh-my-zsh/custom/install-plugins.zsh
+source $DEV/zsh/custom/install-plugins.zsh
 installplugins
 
 # Install tpm
@@ -52,6 +52,6 @@ source $DEV/tmux/install-tpm.zsh
 installtpm
 
 # Install misc via brew
-source $DEV/oh-my-zsh/custom/install-with-brew.zsh
+source $DEV/zsh/custom/install-with-brew.zsh
 installwithbrew
 

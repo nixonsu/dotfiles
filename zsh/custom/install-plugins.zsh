@@ -1,5 +1,5 @@
 function install_zsh_autosuggestions {
-  local autosuggestions_dir="${DEV}/oh-my-zsh/custom/plugins/zsh-autosuggestions"
+  local autosuggestions_dir="${DEV}/zsh/custom/plugins/zsh-autosuggestions"
   if [ -d "$autosuggestions_dir" ]; then
     echo "zsh-autosuggestions directory already exists. Skipping clone."
   else
@@ -8,7 +8,7 @@ function install_zsh_autosuggestions {
 }
 
 function install_zsh_z {
-  local z_dir="${DEV}/oh-my-zsh/custom/plugins/zsh-z"
+  local z_dir="${DEV}/zsh/custom/plugins/zsh-z"
   if [ -d "$z_dir" ]; then
     echo "zsh-z directory already exists. Skipping clone."
   else
@@ -17,7 +17,7 @@ function install_zsh_z {
 }
 
 function install_zsh_syntax_highlighting {
-  local syntax_highlighting_dir="${DEV}/oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+  local syntax_highlighting_dir="${DEV}/zsh/custom/plugins/zsh-syntax-highlighting"
   if [ -d "$syntax_highlighting_dir" ]; then
     echo "zsh-syntax-highlighting directory already exists. Skipping clone."
   else
