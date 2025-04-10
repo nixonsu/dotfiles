@@ -3,10 +3,8 @@ let mapleader = " "
 " Turn on syntax highlighting
 syntax on
 colorscheme monokai
-" ensures vim shares clipboarxd with sys clipboard
-set clipboard+=unnamed
-" start scrolling once 10 lines remain
-set scrolloff=10
+" start scrolling once 12 lines remain
+set scrolloff=12
 " Set to relative line number by default
 set relativenumber number
 " Map H and L to navigate between tabs
