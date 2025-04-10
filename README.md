@@ -23,10 +23,9 @@ git clone git@github.com:nixonsu/dotfiles.git ~
 export DEV="$HOME/dotfiles"
 ```
 
-4. Run installation script
-- This creates symlinks and installs zsh custom plugins & themes
+4. Run sync script (creates symlinks and installs zsh custom plugins & themes)
 ```zsh
-$DEV/install.sh
+$DEV/sync.sh
 ```
 
 5. Restart shell and viola!
