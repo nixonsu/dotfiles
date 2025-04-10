@@ -32,10 +32,10 @@ fi
 ln -sf $DEV/vim/.vimrc ~/.vimrc
 ln -sf $DEV/vim/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/vim/.obsidian.vimrc ~/Documents/Obsidian/Vault/.obsidian.vimrc
-ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
-ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
+ln -sf $DEV/git/.gitconfig ~/.gitconfig
+ln -sf $DEV/zsh/.zshrc ~/.zshrc
 ln -sf $DEV/tmux/.tmux.conf ~/.tmux.conf
-ln -sf $DEV/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -sf $DEV/zsh/.p10k.zsh ~/.p10k.zsh
 ln -sf $DEV/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
