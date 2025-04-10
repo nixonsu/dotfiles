@@ -28,6 +28,14 @@
                         "vendor_id": 3141
                     },
                     "ignore": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 668,
+                        "vendor_id": 76
+                    }
                 }
             ],
             "name": "Default profile",
