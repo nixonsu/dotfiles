@@ -29,14 +29,14 @@ if [ ! -L "$HOME/.config/karabiner" ] && [ ! -d "$HOME/.config/karabiner" ]; the
   ln -s "$DEV/karabiner" "$HOME/.config/karabiner"
 fi
 
-ln -sf $DEV/dotfiles/.vimrc ~/.vimrc
-ln -sf $DEV/dotfiles/.ideavimrc ~/.ideavimrc
-ln -sf $DEV/obsidian/.obsidian.vimrc ~/Documents/Obsidian/Vault/.obsidian.vimrc
+ln -sf $DEV/vim/.vimrc ~/.vimrc
+ln -sf $DEV/vim/.ideavimrc ~/.ideavimrc
+ln -sf $DEV/vim/.obsidian.vimrc ~/Documents/Obsidian/Vault/.obsidian.vimrc
 ln -sf $DEV/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $DEV/dotfiles/.zshrc ~/.zshrc
 ln -sf $DEV/tmux/.tmux.conf ~/.tmux.conf
 ln -sf $DEV/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -sf $DEV/colorschemes/vim/monokai.vim ~/.vim/colors/monokai.vim
+ln -sf $DEV/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
 # Install powerlevel10k theme
