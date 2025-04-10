@@ -1,3 +1,5 @@
+echo 'Begin sync...'
+
 # Clearing default settings
 echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
 rm -rf $HOME/.oh-my-zsh/custom
@@ -54,4 +56,6 @@ installtpm
 # Install misc via brew
 source $DEV/zsh/custom/install-with-brew.zsh
 installwithbrew
+
+echo 'Sync complete!'
 
