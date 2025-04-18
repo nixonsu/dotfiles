@@ -1,6 +1,8 @@
 brew "git-delta"
 brew "tmux"
 brew "neovim"
+brew "fd"
+brew "ripgrep"
 cask "alacritty"
 brew "fzf"
 cask "karabiner-elements"
