@@ -6,8 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
       { out, "WarningMsg" },
-    }, true, {})
-    { "\nPress any key to exit..." }
+    }, true, {})({ "\nPress any key to exit..." })
     vim.fn.getchar()
     os.exit(1)
   end
