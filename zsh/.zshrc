@@ -140,6 +140,16 @@ export PATH="/Users/Nixon.Uch/.rd/bin:$PATH"
 
 PATH=~/.console-ninja/.bin:$PATH
 
+# YAZI: Allows ability to change directory when exiting Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
