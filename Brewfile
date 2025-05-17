@@ -1,6 +1,7 @@
 brew "git-delta"
 brew "tmux"
 brew "neovim"
+brew "yazi"
 brew "fd"
 brew "ripgrep"
 cask "alacritty"
