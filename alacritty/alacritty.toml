@@ -36,11 +36,11 @@ program = "/bin/zsh"
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-opacity = 0.85
+opacity = 0.50
+blur = true
+startup_mode = "Maximized"
 
 [window.padding]
 x = 18
 y = 16
-
-[terminal]
 
