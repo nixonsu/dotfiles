@@ -21,7 +21,7 @@ alias gst='git stash'
 alias gcl='git clone'
 alias grev='git revert'
 alias gpr='open "$(git config --get remote.origin.url | sed -e "s/git@github.com:/https:\/\/github.com\//" -e "s/\.git$//")/compare/$(git symbolic-ref --short HEAD)?expand=1"'
-
+alias gw='git worktree'
 
 # Open current branch in github
 alias ghub='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD )'
