@@ -2,7 +2,7 @@
 let mapleader = " "
 " Turn on syntax highlighting
 syntax on
-colorscheme monokai
+" colorscheme monokai
 " start scrolling once 12 lines remain
 set scrolloff=12
 " Set to relative line number by default
