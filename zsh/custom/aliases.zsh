@@ -30,6 +30,9 @@ alias ghub='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/h
 alias lg='lazygit'
 alias ld='lazydocker'
 
+# nvim
+alias n="nvim $1"
+
 # Open Jetbrains IDEs
 function find_solution_or_project {
     echo $(find . -name '*.sln' -o -name '*.csproj' -maxdepth 1 | head -n 1)
