@@ -7,6 +7,10 @@ rm -rf $HOME/.config/alacritty
 rm -rf $HOME/.config/karabiner
 echo 'Done.'
 
+# Install via brew
+source $DEV/zsh/custom/install-with-brew.zsh
+installwithbrew
+
 # Create and overwrite symlinks
 # WARNING: THIS WILL OVERWRITE EXISTING FILES
 echo 'Creating symlinks...'
@@ -52,10 +56,6 @@ installplugins
 # Install tpm
 source $DEV/tmux/install-tpm.zsh 
 installtpm
-
-# Install misc via brew
-source $DEV/zsh/custom/install-with-brew.zsh
-installwithbrew
 
 echo 'Sync complete!'
 
