@@ -5,6 +5,7 @@ echo 'Clearing defaults oh-my-zsh and tmux configurations at root...'
 rm -rf $HOME/.oh-my-zsh/custom
 rm -rf $HOME/.config/alacritty
 rm -rf $HOME/.config/karabiner
+rm -rf $HOME/.config/yazi
 echo 'Done.'
 
 # Install via brew
@@ -33,6 +34,10 @@ fi
 if [ ! -L "$HOME/.config/karabiner" ] && [ ! -d "$HOME/.config/karabiner" ]; then
 	mkdir -p "$HOME/.config"
   ln -s "$DEV/karabiner" "$HOME/.config/karabiner"
+fi
+if [ ! -L "$HOME/.config/yazi" ] && [ ! -d "$HOME/.config/yazi" ]; then
+	mkdir -p "$HOME/.config"
+  ln -s "$DEV/yazi" "$HOME/.config/yazi"
 fi
 
 ln -sf $DEV/vim/.vimrc ~/.vimrc

@@ -1,0 +1,10 @@
+[manager]
+prepend_keymap = [
+    { on = "y", run = [
+        '''
+        shell 'xclip -selection clipboard -t image/png -i "$@"' --confirm
+        ''',
+        "yank"
+    ], desc = "Yank image and copy it to clipboard" }
+]
+
