@@ -11,6 +11,7 @@ cask "karabiner-elements"
 brew "k9s"
 cask "docker"
 cask "scroll-reverser"
+cask "homerow"
 
 brew "nvm"
 brew "uv"
