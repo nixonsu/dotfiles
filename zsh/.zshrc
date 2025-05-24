@@ -129,10 +129,12 @@ export DEV="$HOME/dotfiles"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# PYENV
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# PYENV (only if installed via Homebrew)
+if command -v brew >/dev/null && [ -x "$(brew --prefix pyenv)/bin/pyenv" ]; then
+  export PYENV_ROOT="$(brew --prefix pyenv)"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/Nixon.Uch/.rd/bin:$PATH"
@@ -153,5 +155,7 @@ function y() {
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
 fi
-
 source <(fzf --zsh)
+
+export PATH="/opt/homebrew/bin:$PATH"
+
