@@ -6,6 +6,8 @@ rm -rf $HOME/.oh-my-zsh/custom
 rm -rf $HOME/.config/alacritty
 rm -rf $HOME/.config/karabiner
 rm -rf $HOME/.config/yazi
+rm -rf $HOME/.config/nvim
+rm -rf $HOME/.nvm
 echo 'Done.'
 
 # Install via brew
@@ -39,6 +41,14 @@ if [ ! -L "$HOME/.config/yazi" ] && [ ! -d "$HOME/.config/yazi" ]; then
 	mkdir -p "$HOME/.config"
   ln -s "$DEV/yazi" "$HOME/.config/yazi"
 fi
+if [ ! -L "$HOME/.config/nvim" ] && [ ! -d "$HOME/.config/nvim" ]; then
+	mkdir -p "$HOME/.config"
+  ln -s "$DEV/nvim" "$HOME/.config/nvim"
+fi
+if [ ! -L "$HOME/.config/nvm" ] && [ ! -d "$HOME/.config/nvm" ]; then
+	mkdir -p "$HOME/.config"
+  ln -s "$DEV/nvm" "$HOME/.config/nvm"
+fi
 
 ln -sf $DEV/vim/.vimrc ~/.vimrc
 ln -sf $DEV/vim/.ideavimrc ~/.ideavimrc
@@ -47,7 +57,6 @@ ln -sf $DEV/git/.gitconfig ~/.gitconfig
 ln -sf $DEV/zsh/.zshrc ~/.zshrc
 ln -sf $DEV/tmux/.tmux.conf ~/.tmux.conf
 ln -sf $DEV/zsh/.p10k.zsh ~/.p10k.zsh
-ln -sf $DEV/vim/monokai.vim ~/.vim/colors/monokai.vim
 echo 'Done.'
 
 # Install powerlevel10k theme
