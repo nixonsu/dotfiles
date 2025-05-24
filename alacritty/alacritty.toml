@@ -30,7 +30,7 @@ family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [terminal.shell]
-args = ["-l", "-c", "tmux attach || tmux"]
+args = ["-l", "-c", "/opt/homebrew/bin/tmux attach || tmux"]
 program = "/bin/zsh"
 
 [window]
