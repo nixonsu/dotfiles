@@ -15,6 +15,7 @@ cask "homerow"
 
 brew "nvm"
 brew "uv"
+brew "pgweb"
 
 tap "jesseduffield/lazygit" 
 brew "lazygit"
