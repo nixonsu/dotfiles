@@ -20,6 +20,7 @@ brew "pgweb"
 tap "jesseduffield/lazygit" 
 brew "lazygit"
 brew "lazydocker"
+brew "lazysql"
 
 cask "google-chrome"
 cask "obsidian"
