@@ -46,6 +46,10 @@ alias ideaw='open -a "WebStorm" .'
 # Sleep macos
 alias sl='pmset sleepnow'
 
+# Disable/enable sleep function
+alias ds='sudo pmset disablesleep 1'
+alias es='sudo pmset disablesleep 0'
+
 # Source zsh
 alias so='source ${DEV}/zsh/.zshrc'
 
