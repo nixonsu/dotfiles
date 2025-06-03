@@ -31,7 +31,6 @@ cask "bitwarden"
 cask "discord"
 cask "dropbox"
 cask "google-drive"
-cask "thunderbird"
 
 cask "shottr"
 cask "bluesnooze"
