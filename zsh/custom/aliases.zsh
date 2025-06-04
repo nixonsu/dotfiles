@@ -29,6 +29,7 @@ alias ghub='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/h
 # Lazy tools
 alias lg='lazygit'
 alias ld='lazydocker'
+alias lsql='lazysql'
 
 # nvim
 alias n="nvim $1"
