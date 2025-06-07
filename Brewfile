@@ -14,6 +14,7 @@ brew "fzf"
 brew "k9s"
 brew "pgweb"
 brew "nvm"
+brew "yarn"
 brew "uv"
 
 # Apps
