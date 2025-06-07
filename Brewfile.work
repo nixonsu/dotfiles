@@ -21,13 +21,8 @@ cask "alacritty"
 cask "google-chrome"
 cask "obsidian"
 cask "spotify"
-cask "microsoft-word"
-cask "messenger"
 cask "bitwarden"
-cask "discord"
 cask "dropbox"
-cask "google-drive"
-cask "docker"
 
 # App utils
 cask "karabiner-elements"
