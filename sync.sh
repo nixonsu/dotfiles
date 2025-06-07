@@ -7,7 +7,6 @@ rm -rf $HOME/.config/alacritty
 rm -rf $HOME/.config/karabiner
 rm -rf $HOME/.config/yazi
 rm -rf $HOME/.config/nvim
-rm -rf $HOME/.nvm
 echo 'Done.'
 
 # Install via brew
@@ -22,32 +21,24 @@ if [ ! -L "$HOME/.oh-my-zsh/custom" ]; then
   ln -s "$DEV/zsh/custom" "$HOME/.oh-my-zsh/custom"
 fi
 if [ ! -L "$HOME/.tmux/plugins/tpm" ] && [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
-	mkdir -p "$HOME/.tmux/plugins"
+  mkdir -p "$HOME/.tmux/plugins"
   ln -s "$DEV/tmux/plugins/tpm" "$HOME/.tmux/plugins/tpm"
 fi
 if [ ! -L "$HOME/.config/nvim" ] && [ ! -d "$HOME/.config/nvim" ]; then
-	mkdir -p "$HOME/.config"
+  mkdir -p "$HOME/.config"
   ln -s "$DEV/nvim" "$HOME/.config/nvim"
 fi
 if [ ! -L "$HOME/.config/alacritty" ] && [ ! -d "$HOME/.config/alacritty" ]; then
-	mkdir -p "$HOME/.config"
+  mkdir -p "$HOME/.config"
   ln -s "$DEV/alacritty" "$HOME/.config/alacritty"
 fi
 if [ ! -L "$HOME/.config/karabiner" ] && [ ! -d "$HOME/.config/karabiner" ]; then
-	mkdir -p "$HOME/.config"
+  mkdir -p "$HOME/.config"
   ln -s "$DEV/karabiner" "$HOME/.config/karabiner"
 fi
 if [ ! -L "$HOME/.config/yazi" ] && [ ! -d "$HOME/.config/yazi" ]; then
-	mkdir -p "$HOME/.config"
+  mkdir -p "$HOME/.config"
   ln -s "$DEV/yazi" "$HOME/.config/yazi"
-fi
-if [ ! -L "$HOME/.config/nvim" ] && [ ! -d "$HOME/.config/nvim" ]; then
-	mkdir -p "$HOME/.config"
-  ln -s "$DEV/nvim" "$HOME/.config/nvim"
-fi
-if [ ! -L "$HOME/.config/nvm" ] && [ ! -d "$HOME/.config/nvm" ]; then
-	mkdir -p "$HOME/.config"
-  ln -s "$DEV/nvm" "$HOME/.config/nvm"
 fi
 
 ln -sf $DEV/vim/.vimrc ~/.vimrc
@@ -68,8 +59,7 @@ source $DEV/zsh/custom/install-plugins.zsh
 installplugins
 
 # Install tpm
-source $DEV/tmux/install-tpm.zsh 
+source $DEV/tmux/install-tpm.zsh
 installtpm
 
 echo 'Sync complete!'
-
