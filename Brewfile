@@ -29,6 +29,8 @@ cask "discord"
 cask "dropbox"
 cask "google-drive"
 cask "docker"
+cask "visual-studio-code"
+cask "intellij-idea"
 
 # App utils
 cask "karabiner-elements"

@@ -24,6 +24,8 @@ cask "obsidian"
 cask "spotify"
 cask "bitwarden"
 cask "dropbox"
+cask "visual-studio-code"
+cask "intellij-idea"
 
 # App utils
 cask "karabiner-elements"
