@@ -74,3 +74,15 @@ Git configuration is setup to allow me to use one set of creds under one folder 
 ### Zsh
 
 This folder contains all zsh configurations and also includes useful aliases. Zsh scripts in this folder are auto-loaded when oh-my-zsh runs.
+
+### MacOS specific stuff
+
+`Option + num` shortcuts will by default insert characters like ¡™£¢. These need to be disabled to use them effectively for other shortcuts.
+
+1. Write to directory: `~/Library/KeyBindings/DefaultKeyBinding.dict` with the following content:
+
+```
+{ "~a" = (); "~b" = (); "~c" = (); "~d" = (); "~e" = (); "~f" = (); "~g" = (); "~h" = (); "~i" = (); "~j" = (); "~k" = (); "~l" = (); "~m" = (); "~n" = (); "~o" = (); "~p" = (); "~q" = (); "~r" = (); "~s" = (); "~t" = (); "~u" = (); "~v" = (); "~w" = (); "~x" = (); "~y" = (); "~z" = (); }
+```
+
+2. Save and reboot machine
