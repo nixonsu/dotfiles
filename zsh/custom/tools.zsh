@@ -1,3 +1,4 @@
+# Activate python virtual env with name .venv
 uva() {
     local venv_name=${1:-'.venv'}
     venv_name=${venv_name//\//} # remove trailing slashes (Linux)
@@ -22,6 +23,7 @@ uva() {
     echo "[INFO] Activated Python virtual environment: ${venv_name} (via ${activator})"
 }
 
+# Usage: Given ./directory/plugins/temp -> Then `ccd d p t` ends up in temp
 ccd() {
   local path="."
   for part in "$@"; do
