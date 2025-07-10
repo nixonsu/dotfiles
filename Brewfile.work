@@ -16,6 +16,7 @@ brew "pgweb"
 brew "nvm"
 brew "yarn"
 brew "uv"
+brew "tree"
 
 # Apps
 cask "alacritty"

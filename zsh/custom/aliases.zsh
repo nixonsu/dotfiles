@@ -48,6 +48,14 @@ alias sl='pmset sleepnow'
 alias ds='sudo pmset disablesleep 1'
 alias es='sudo pmset disablesleep 0'
 
+alias n='nvim'
+
+# Tree
+alias t='tree'
+alias t1='tree -L 1'
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+
 # Source zsh
 alias so='source ${DEV}/zsh/.zshrc'
 
