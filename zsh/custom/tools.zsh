@@ -22,3 +22,15 @@ uva() {
     echo "[INFO] Activated Python virtual environment: ${venv_name} (via ${activator})"
 }
 
+ccd() {
+  local path="."
+  for part in "$@"; do
+    local dirs=($path/${part}*/)
+    if (( ${#dirs[@]} == 0 )); then
+      echo "No match for $part"
+      return 1
+    fi
+    path="${dirs[1]%/}"
+  done
+  cd "$path"
+}
