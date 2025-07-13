@@ -25,4 +25,13 @@ function install_zsh_syntax_highlighting {
   fi
 }
 
-alias installplugins='echo "Installing zsh plugins...";install_zsh_autosuggestions;install_zsh_z;install_zsh_syntax_highlighting;echo "Done."'
+function install_fzf_tab {
+  local fzf_tab_dir="${DEV}/zsh/custom/plugins/fzf-tab"
+  if [ -d "$fzf_tab" ]; then
+    echo "fzf-tab directory already exists. Skipping clone."
+  else
+    git clone https://github.com/Aloxaf/fzf-tab.git "$fzf_tab_dir"
+  fi
+}
+
+alias installplugins='echo "Installing zsh plugins...";install_zsh_autosuggestions;install_zsh_z;install_zsh_syntax_highlighting;install_fzf_tab;echo "Done."'
