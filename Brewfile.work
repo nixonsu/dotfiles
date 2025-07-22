@@ -17,6 +17,7 @@ brew "nvm"
 brew "yarn"
 brew "uv"
 brew "tree"
+brew "gh"
 
 # Apps
 cask "alacritty"
