@@ -1,9 +1,9 @@
 # Open in tmux popup if on tmux, otherwise use --height mode
-export FZF_DEFAULT_OPTS="\
-  --style full \
-  --preview 'fzf-preview.sh {}' \
-  --bind 'focus:transform-header:file --brief {}' \
-"
+# export FZF_DEFAULT_OPTS="\
+#   --style full \
+#   --preview 'fzf-preview.sh {}' \
+#   --bind 'focus:transform-header:file --brief {}' \
+# "
 
 # fd - cd to selected directory
 fd() {
