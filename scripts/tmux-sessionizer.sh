@@ -3,8 +3,10 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find ~/repos -mindepth 1 -maxdepth 1 -type d | sed "s|^$HOME/||" | fzf)
+  # Strip root HOME from prefix
+  selected=$(find ~/repos ~/repos/work ~/repos/personal -mindepth 1 -maxdepth 1 -type d | sed "s|^$HOME/||" | fzf)
   if [[ -n "$selected" ]]; then
+    # Add root HOME to prefix
     selected="$HOME/$selected"
   fi
 fi
