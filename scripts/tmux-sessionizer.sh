@@ -3,10 +3,15 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  # Strip root HOME from prefix
-  selected=$(find ~/repos ~/repos/work ~/repos/personal -mindepth 1 -maxdepth 1 -type d | sed "s|^$HOME/||" | fzf)
+  # sed strips leading path
+  selected=$(
+    {
+      printf '%s\n' "${HOME}/dotfiles"
+      find ~/repos ~/repos/work ~/repos/personal -mindepth 1 -maxdepth 1 -type d
+    } | sed "s|^$HOME/||" | fzf
+  )
   if [[ -n "$selected" ]]; then
-    # Add root HOME to prefix
+    # Add back trailing path
     selected="$HOME/$selected"
   fi
 fi
