@@ -125,6 +125,8 @@ export NVM_DIR="$HOME/.nvm"
 # Dev config folder
 export DEV="$HOME/dotfiles"
 
+export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

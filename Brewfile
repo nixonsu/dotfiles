@@ -1,6 +1,6 @@
 # TUIs
 brew "tmux"
-brew "neovim"
+# brew "neovim"
 brew "git-delta"
 brew "lazygit"
 brew "lazydocker"
@@ -18,6 +18,7 @@ brew "yarn"
 brew "uv"
 brew "tree"
 brew "gh"
+brew "bob"
 
 # Apps
 cask "alacritty"
