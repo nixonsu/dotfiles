@@ -53,7 +53,7 @@ vim.cmd.colorscheme("catppuccin-mocha")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "StatusLine",   { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 ------------------------------SETTINGS-----------------------------
 
@@ -101,4 +101,15 @@ vim.keymap.set("n", "<leader>ln", ":set invrelativenumber<CR>", { silent = true 
 -- Pickers
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
+
+-- Diagnostics
+local diagnostics_active = true
+vim.keymap.set("n", "<leader>d", function()
+	diagnostics_active = not diagnostics_active
+	if diagnostics_active then
+		vim.diagnostic.show()
+	else
+		vim.diagnostic.hide()
+	end
+end)
 ------------------------------KEYMAPS------------------------------
