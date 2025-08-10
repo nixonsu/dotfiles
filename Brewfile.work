@@ -3,7 +3,6 @@ brew "tmux"
 brew "git-delta"
 brew "lazygit"
 brew "lazydocker"
-brew "lazysql"
 
 # CLI tools
 brew "fd"
