@@ -39,6 +39,7 @@ alias t='tree'
 alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
+alias t4='tree -L 4'
 
 # Source zsh
 alias so='source ${DEV}/zsh/.zshrc'
