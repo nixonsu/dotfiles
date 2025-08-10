@@ -4,7 +4,6 @@ brew "git-delta"
 brew "lazygit"
 brew "lazydocker"
 brew "lazysql"
-brew "yazi"
 
 # CLI tools
 brew "fd"
