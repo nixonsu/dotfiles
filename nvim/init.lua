@@ -52,13 +52,14 @@ vim.cmd.colorscheme("catppuccin-mocha")
 -- Transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.cmd(":hi statusline guibg=NONE")
-
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLine",   { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 ------------------------------SETTINGS-----------------------------
 
 ------------------------------KEYMAPS------------------------------
+vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":quit!<CR>")
@@ -70,10 +71,10 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>a", ":e #<CR>")
 
 -- Open file in vertical split
-vim.keymap.set("n", "<leader>v", ":vs<CR>")
+vim.keymap.set("n", "<leader>vv", ":vs<CR>")
 
 -- Open previous file in vertical split
-vim.keymap.set("n", "<leader>av", ":vs #<CR>")
+vim.keymap.set("n", "<leader>va", ":vs #<CR>")
 
 -- Go to next split
 vim.keymap.set("n", "<leader><Tab>", "<C-w>w")
@@ -100,5 +101,4 @@ vim.keymap.set("n", "<leader>ln", ":set invrelativenumber<CR>", { silent = true 
 -- Pickers
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
-
 ------------------------------KEYMAPS------------------------------
