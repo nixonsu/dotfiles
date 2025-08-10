@@ -1,6 +1,5 @@
 # TUIs
 brew "tmux"
-# brew "neovim"
 brew "git-delta"
 brew "lazygit"
 brew "lazydocker"
