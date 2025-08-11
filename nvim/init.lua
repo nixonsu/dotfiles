@@ -11,7 +11,7 @@ vim.pack.add({
 require("oil").setup()
 require("mini.pick").setup()
 require("mason").setup()
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable({ "lua_ls", "clangd", "pyright" })
 -- Fix lua warnings related to vim table
 vim.lsp.config("lua_ls", {
 	settings = {
@@ -36,14 +36,14 @@ require("nvim-treesitter.configs").setup {
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local opts = { buffer = ev.buf, silent = true }
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "K",  vim.lsp.buf.hover, opts)
-  end,
+	callback = function(ev)
+		local opts = { buffer = ev.buf, silent = true }
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	end,
 })
 ------------------------------PLUGINS-------------------------------
 
