@@ -10,6 +10,7 @@ vim.pack.add({
 
 require("oil").setup()
 require("mini.pick").setup()
+
 require("mason").setup()
 vim.lsp.enable({ "lua_ls" })
 -- Fix lua warnings related to vim table
@@ -111,6 +112,7 @@ vim.keymap.set("n", "<leader>ln", ":set invrelativenumber<CR>", { silent = true 
 
 -- Pickers
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+vim.keymap.set("n", "<leader>g", ":Pick files tool='git'<CR>")
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
 
 -- Diagnostics

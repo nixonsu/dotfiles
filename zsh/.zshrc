@@ -126,6 +126,7 @@ export NVM_DIR="$HOME/.nvm"
 export DEV="$HOME/dotfiles"
 
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
