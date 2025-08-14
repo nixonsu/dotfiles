@@ -1,11 +1,8 @@
 # TUIs
 brew "tmux"
-brew "neovim"
 brew "git-delta"
 brew "lazygit"
 brew "lazydocker"
-brew "lazysql"
-brew "yazi"
 
 # CLI tools
 brew "fd"
@@ -18,6 +15,7 @@ brew "yarn"
 brew "uv"
 brew "tree"
 brew "gh"
+brew "bob"
 
 # Apps
 cask "alacritty"

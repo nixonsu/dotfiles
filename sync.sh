@@ -82,6 +82,7 @@ if [ ! -L "$HOME/.config/yazi" ] && [ ! -d "$HOME/.config/yazi" ]; then
   ln -s "$DEV/yazi" "$HOME/.config/yazi"
 fi
 
+ln -sf $DEV/rg/.ripgreprc ~/.ripgreprc
 ln -sf $DEV/vim/.vimrc ~/.vimrc
 ln -sf $DEV/vim/.ideavimrc ~/.ideavimrc
 ln -sf $DEV/vim/.obsidian.vimrc ~/Dropbox/Obsidian/Vault/.obsidian.vimrc

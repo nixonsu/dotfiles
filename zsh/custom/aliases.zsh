@@ -4,24 +4,8 @@ alias aliases='nvim ~/dotfiles/zsh/custom/aliases.zsh'
 # Delete all local branches except main or master
 alias gbr='git branch | grep -v "main\|master" | xargs git branch -D'
 alias gs='(git fetch &>/dev/null &); git status -s'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias ga='git add'
-alias gp='git pull'
-alias gps='git push'
 alias gl='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(    white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all'
-alias grest='git restore'
-alias gra='git restore .'
-alias gd='git diff'
-alias gm='git merge'
-alias gb='git branch'
-alias grpo='git remote prune origin'
-alias gst='git stash'
-alias gcl='git clone'
-alias grev='git revert'
 alias gpr='open "$(git config --get remote.origin.url | sed -e "s/git@github.com:/https:\/\/github.com\//" -e "s/\.git$//")/compare/$(git symbolic-ref --short HEAD)?expand=1"'
-alias gw='git worktree'
 
 # Open current branch in github
 alias ghub='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD )'
@@ -48,13 +32,14 @@ alias sl='pmset sleepnow'
 alias ds='sudo pmset disablesleep 1'
 alias es='sudo pmset disablesleep 0'
 
-alias n='nvim'
+alias vim='nvim'
 
 # Tree
 alias t='tree'
 alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
+alias t4='tree -L 4'
 
 # Source zsh
 alias so='source ${DEV}/zsh/.zshrc'
