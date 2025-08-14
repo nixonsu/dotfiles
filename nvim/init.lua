@@ -111,8 +111,13 @@ vim.keymap.set("n", "<Esc>", ":noh<CR>", { silent = true })
 vim.keymap.set("n", "<leader>ln", ":set invrelativenumber<CR>", { silent = true })
 
 -- Pickers
+	-- Find files
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+	-- Search
+vim.keymap.set("n", "<leader>s", ":Pick grep tool='rg'<CR>")
+	-- Find version controlled files
 vim.keymap.set("n", "<leader>g", ":Pick files tool='git'<CR>")
+	-- Find help page
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
 
 -- Diagnostics
