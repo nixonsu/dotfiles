@@ -1,0 +1,1 @@
+/Users/nixon/dotfiles/zsh/.zshrc
