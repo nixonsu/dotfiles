@@ -1,7 +1,0 @@
-themes
-zsh/custom/plugins
-tmux/plugins
-secrets.zsh
-.DS_Store
-lazy-lock.json
-automatic_backups
