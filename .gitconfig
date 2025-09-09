@@ -1,0 +1,40 @@
+[user]
+	name = nixonsu
+	email = nixon.s.uch@gmail.com
+[includeIf "gitdir:~/repos/work/"]
+    	path = ~/repos/work/.gitconfig
+[alias]
+	s = status -s
+	co = checkout
+	c = commit
+	ca = commit -a
+	p = pull
+	ps = push
+	st = stash
+	a = add
+	b = branch
+	rest = restore
+	l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	rpo = remote prune origin
+[pull]
+	rebase = false
+
+# Git-delta configurations
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[submodule]
+	recurse = true
