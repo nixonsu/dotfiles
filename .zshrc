@@ -143,6 +143,7 @@ fi
 source <(fzf --zsh)
 
 alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lgdf='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 export PATH="/opt/homebrew/bin:$PATH"
 
