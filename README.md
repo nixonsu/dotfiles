@@ -28,19 +28,26 @@ git clone --bare git@github.com:nixonsu/dotfiles.git ~/.dotfiles
 alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
-5. Checkout intended OS
+5. Once off git config commands (don't show untracked files and fix remote to allow downloading remote branches)
+
+```zsh
+df config --local status.showUntrackedFiles no
+df config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+```
+
+6. Checkout intended OS
 
 ```zsh
 df checkout macos
 ```
 
-6. Run sync script (installs themes, plugins and applications)
+7. Run sync script (installs themes, plugins and applications)
 
 ```zsh
 ~/scripts/sync.sh
 ```
 
-7. Restart shell and viola!
+8. Restart shell and viola!
 
 ## Details
 
