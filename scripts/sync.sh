@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 usage() {
   cat <<EOF
 Usage: $0 [--work] [-h|--help]

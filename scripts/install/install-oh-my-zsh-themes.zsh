@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function installp10k {
   local p10k_dir="$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
   if [ -d "$p10k_dir" ]; then

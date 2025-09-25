@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function install_zsh_autosuggestions {
   local autosuggestions_dir="$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
   if [ -d "$autosuggestions_dir" ]; then

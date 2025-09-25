@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function install_tpm {
   local tpm_dir="$HOME/.tmux/plugins/tpm"
   if [ -d "$tpm_dir" ]; then
