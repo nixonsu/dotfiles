@@ -1,1 +1,1 @@
-plugins=(git fzf-tab fzf zsh-syntax-highlighting zsh-z zsh-autosuggestions)
+plugins=(git fzf-tab zsh-syntax-highlighting zsh-z zsh-autosuggestions)
