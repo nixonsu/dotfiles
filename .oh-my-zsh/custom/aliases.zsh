@@ -1,4 +1,4 @@
-alias aliases='nvim ~/dotfiles/zsh/custom/aliases.zsh'
+alias aliases='nvim ~/.oh-my-zsh/custom/aliases.zsh'
 
 # Git aliases
 # Delete all local branches except main or master
