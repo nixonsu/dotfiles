@@ -17,29 +17,5 @@ brew "tree"
 brew "gh"
 brew "bob"
 
-# Apps
-cask "alacritty"
-cask "google-chrome"
-cask "obsidian"
-cask "spotify"
-cask "microsoft-word"
-cask "microsoft-outlook"
-cask "messenger"
-cask "bitwarden"
-cask "discord"
-cask "dropbox"
-cask "google-drive"
-cask "docker"
-cask "visual-studio-code"
-cask "intellij-idea"
-
-# App utils
-cask "karabiner-elements"
-cask "raycast"
-cask "shottr"
-cask "bluesnooze"
-cask "scroll-reverser"
-cask "homerow"
-
 # Others
 cask "font-jetbrains-mono-nerd-font"

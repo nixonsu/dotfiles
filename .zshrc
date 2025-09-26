@@ -69,11 +69,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 # FZF
-if [[ "$(uname)" == "Linux" ]]; then
-	export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-elif [[ "$(uname)" == "Darwin" ]]; then
-  export PATH="/opt/homebrew/opt/fzf/bin:$PATH"
-fi
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 source <(fzf --zsh)
 
 # Git bare repository aliases
@@ -81,9 +77,5 @@ alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lgdf='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
-if [[ "$(uname)" == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-elif [[ "$(uname)" == "Darwin" ]]; then
-	export PATH="/opt/homebrew/bin:$PATH"
-fi
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
