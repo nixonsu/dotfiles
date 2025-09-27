@@ -38,7 +38,7 @@ df config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 6. Checkout intended OS
 
 ```zsh
-df checkout macos
+df checkout linux
 ```
 
 7. Run sync script (installs themes, plugins and applications)
@@ -61,10 +61,6 @@ I use tmux to ensure sesions are persisted even when my local shell is disconnec
 2. Press prefix + I (capital i, as in Install) to fetch the plugin.
 You're good to go! The plugin was cloned to ~/.tmux/plugins/ dir and sourced.
 
-### Karabiner
-
-I use karabiner-elements to configure raw key mappings. For example, `CAPS LOCK` -> `ESC` when tapped and `CAPS LOCK` -> `CTRL` when held.
-
 ### Git
 
 Git config allows me to use one set of creds under one folder and another set of creds under another folder. This is especially handy for working on my personal projects on a work device.
@@ -73,14 +69,3 @@ Git config allows me to use one set of creds under one folder and another set of
 
 `.oh-my-zsh` contains zsh configurations like plugins, themes, aliases, scripts etc. `.zsh` scripts in this folder are auto-loaded when oh-my-zsh runs.
 
-### MacOS specific stuff
-
-`Option + num` shortcuts will by default insert characters like ¡™£¢. These need to be disabled to use them effectively for other shortcuts.
-
-1. Write to directory: `~/Library/KeyBindings/DefaultKeyBinding.dict` with the following content:
-
-```
-{ "~a" = (); "~b" = (); "~c" = (); "~d" = (); "~e" = (); "~f" = (); "~g" = (); "~h" = (); "~i" = (); "~j" = (); "~k" = (); "~l" = (); "~m" = (); "~n" = (); "~o" = (); "~p" = (); "~q" = (); "~r" = (); "~s" = (); "~t" = (); "~u" = (); "~v" = (); "~w" = (); "~x" = (); "~y" = (); "~z" = (); }
-```
-
-2. Save and reboot machine
