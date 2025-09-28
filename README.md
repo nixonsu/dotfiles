@@ -14,7 +14,7 @@ git clone --bare git@github.com:nixonsu/dotfiles.git $HOME/.dotfiles
 2. Temporarily set alias `df`
 
 ```powershell
-function g {
+function df {
     & "C:\Program Files\Git\cmd\git.exe" --git-dir=$HOME/.dotfiles --work-tree=$HOME @args
 }
 ```
@@ -30,4 +30,10 @@ df config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 
 ```zsh
 df checkout windows
+```
+
+5. Install programs
+
+```powershell
+winget install Microsoft.PowerToys Google.Chrome StartIsBack.StartAllBack Obsidian.Obsidian Microsoft.VisualStudioCode Ytmdesktop.Ytmdesktop
 ```
