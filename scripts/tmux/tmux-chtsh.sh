@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-selected=$(cat ~/.tmux/.tmux-cht-languages ~/.tmux/.tmux-cht-commands | fzf)
+selected=$(cat ~/.tmux/.tmux-cht-languages ~/.tmux/.tmux-cht-commands | /home/linuxbrew/.linuxbrew/bin/fzf )
 if [[ -z $selected ]]; then
   exit 0
 fi
