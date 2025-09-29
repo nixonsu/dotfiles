@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
+
 
 if [[ $# -eq 1 ]]; then
   selected=$1
@@ -8,7 +9,7 @@ else
     {
       printf '%s\n' "${HOME}"
       find ~/repos ~/repos/work ~/repos/personal -mindepth 1 -maxdepth 1 -type d
-    } | sed "s|^$HOME/||" | fzf
+    } | sed "s|^$HOME/||" | /home/linuxbrew/.linuxbrew/bin/fzf
   )
   if [[ -n "$selected" ]]; then
     # Add back trailing path
