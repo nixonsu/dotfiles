@@ -37,3 +37,5 @@ df checkout windows
 ```powershell
 winget install Microsoft.PowerToys Google.Chrome StartIsBack.StartAllBack Obsidian.Obsidian Microsoft.VisualStudioCode Ytmdesktop.Ytmdesktop
 ```
+
+- [AutoHotKey V2](https://www.autohotkey.com/)
