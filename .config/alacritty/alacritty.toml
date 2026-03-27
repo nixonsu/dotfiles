@@ -31,7 +31,7 @@ style = "Regular"
 
 [terminal.shell]
 args = ["new-session", "-A", "-s", "dev"]
-program = "/opt/homebrew/bin/tmux"
+program = "/home/linuxbrew/.linuxbrew/bin/tmux"
 
 [window]
 decorations = "buttonless"

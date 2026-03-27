@@ -24,7 +24,7 @@ vim.lsp.config("lua_ls", {
 	}
 })
 
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.config").setup {
 	ensure_installed = { "lua" },
 	sync_install = false,
 	auto_install = true,
