@@ -1,7 +1,7 @@
 [user]
 	name = nixonsu
 	email = nixon.s.uch@gmail.com
-[includeIf "gitdir:~/dev"]
+[includeIf "gitdir:C:/dev/"]
 	path = ~/.workgitconfig
 [alias]
 	s = status -s
