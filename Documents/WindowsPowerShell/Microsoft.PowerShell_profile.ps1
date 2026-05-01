@@ -5,6 +5,9 @@ if (Test-Path $privateProfile) {
     . $privateProfile
 }
 
+# Allow for multi-line paste without executing code (to turn off: Write-Host -NoNewline "`e[?2004l")
+Write-Host -NoNewline "`e[?2004h"
+
 # Aliases
 function lg { lazygit }
 
