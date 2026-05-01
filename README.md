@@ -35,7 +35,16 @@ df checkout windows
 5. Install programs
 
 ```powershell
-winget install Microsoft.PowerToys Google.Chrome StartIsBack.StartAllBack Obsidian.Obsidian Microsoft.VisualStudioCode Ytmdesktop.Ytmdesktop
+winget install `
+Google.Chrome `
+Obsidian.Obsidian `
+Alacritty.Alacritty `
+Microsoft.VisualStudioCode `
+Ytmdesktop.Ytmdesktop `
+JesseDuffield.lazygit `
+ajeetdsouza.zoxide `
+fzf `
+psmux
 ```
 
 - [AutoHotKey V2](https://www.autohotkey.com/)
