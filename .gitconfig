@@ -1,8 +1,8 @@
 [user]
 	name = nixonsu
 	email = nixon.s.uch@gmail.com
-[includeIf "gitdir:~/repos/work/"]
-    	path = ~/repos/work/.gitconfig
+[includeIf "gitdir:~/development/"]
+ 	path = ~/.gitconfig-work
 [alias]
 	s = status -s
 	co = checkout
@@ -37,4 +37,4 @@
     colorMoved = default
 
 [submodule]
-	recurse = true
+    recurse = true

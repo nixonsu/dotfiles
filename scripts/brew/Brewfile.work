@@ -15,17 +15,11 @@ brew "yarn"
 brew "uv"
 brew "tree"
 brew "gh"
-brew "bob"
 
 # Apps
 cask "alacritty"
-cask "google-chrome"
 cask "obsidian"
-cask "spotify"
-cask "bitwarden"
 cask "dropbox"
-cask "visual-studio-code"
-cask "intellij-idea"
 
 # App utils
 cask "karabiner-elements"
