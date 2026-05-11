@@ -24,18 +24,6 @@ vim.lsp.config("lua_ls", {
 	}
 })
 
-require("nvim-treesitter.configs").setup {
-	ensure_installed = { "lua" },
-	sync_install = false,
-	auto_install = true,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
-	modules = {},
-	ignore_install = {}
-}
-
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		local opts = { buffer = ev.buf, silent = true }
