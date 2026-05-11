@@ -7,7 +7,7 @@ else
   selected=$(
     {
       printf '%s\n' "${HOME}"
-      find ~/repos ~/repos/work ~/repos/personal -mindepth 1 -maxdepth 1 -type d
+      find ~/repos ~/development ~/development/payroll-core -mindepth 1 -maxdepth 1 -type d
     } | sed "s|^$HOME/||" | fzf
   )
   if [[ -n "$selected" ]]; then

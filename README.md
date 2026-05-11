@@ -75,6 +75,7 @@ Git config allows me to use one set of creds under one folder and another set of
 
 ### MacOS specific stuff
 
+#### Allow keybind shortcuts to be used
 `Option + num` shortcuts will by default insert characters like ¡™£¢. These need to be disabled to use them effectively for other shortcuts.
 
 1. Write to directory: `~/Library/KeyBindings/DefaultKeyBinding.dict` with the following content:
@@ -84,3 +85,9 @@ Git config allows me to use one set of creds under one folder and another set of
 ```
 
 2. Save and reboot machine
+
+#### Allow holding down keys
+
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
