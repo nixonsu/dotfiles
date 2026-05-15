@@ -67,16 +67,22 @@ vim.keymap.set("n", "<leader>e", ":Oil<CR>")
 
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 
--- Go to previous file
+-- Switch between last used buffer
 vim.keymap.set("n", "<leader>a", ":e #<CR>")
 
--- Open file in vertical split
-vim.keymap.set("n", "<leader>vv", ":vs<CR>")
+-- Open window in vertical split
+vim.keymap.set("n", "<leader>\\", ":vs<CR>")
 
--- Open previous file in vertical split
+-- Open previous buffer in vertical split
 vim.keymap.set("n", "<leader>va", ":vs #<CR>")
 
--- Go to next split
+-- Previous buffer
+vim.keymap.set("n", "<leader>bp", ":bp <CR>")
+
+-- Next buffer
+vim.keymap.set("n", "<leader>bn", ":bn <CR>")
+
+-- Go to next window split
 vim.keymap.set("n", "<leader><Tab>", "<C-w>w")
 
 -- Copy to system clipboard
@@ -101,12 +107,18 @@ vim.keymap.set("n", "<leader>ln", ":set invrelativenumber<CR>", { silent = true 
 -- Pickers
 	-- Find files
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+	-- Buffers
+vim.keymap.set("n", "<leader>u", ":Pick buffers<CR>")
 	-- Search
 vim.keymap.set("n", "<leader>s", ":Pick grep tool='rg'<CR>")
 	-- Find version controlled files
 vim.keymap.set("n", "<leader>g", ":Pick files tool='git'<CR>")
 	-- Find help page
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
+
+
+-- Source
+vim.keymap.set("n", "<leader>0", ":luafile %<CR>")
 
 -- Diagnostics
 local diagnostics_active = true
