@@ -15,7 +15,7 @@ git clone --bare git@github.com:nixonsu/dotfiles.git $HOME/.dotfiles
 
 ```powershell
 function df {
-    & "C:\Program Files\Git\cmd\git.exe" --git-dir=$HOME/.dotfiles --work-tree=$HOME @args
+    & git --git-dir=$HOME/.dotfiles --work-tree=$HOME @args
 }
 ```
 
