@@ -29,7 +29,7 @@ df config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 4. Checkout intended OS
 
 ```zsh
-df checkout windows
+df checkout windows --force
 ```
 
 5. Install programs
@@ -44,7 +44,13 @@ Ytmdesktop.Ytmdesktop `
 JesseDuffield.lazygit `
 ajeetdsouza.zoxide `
 fzf `
+DEVCOM.JetBrainsMonoNerdFont`
 psmux
 ```
 
 - [AutoHotKey V2](https://www.autohotkey.com/)
+
+## Annoyances
+1. Windows terminal gets stuck processing and doesn't resume until a key is pressed. Solution: Right click window > Properties > Disable 'QuickEdit Mode'
+2. Windows aliases not working. Solution: Run `echo $profile.CurrentUserAllHosts` to see if the correct profile is being referenced.
+
