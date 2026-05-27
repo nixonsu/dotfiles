@@ -5,7 +5,7 @@ syntax on
 " start scrolling once 12 lines remain
 set scrolloff=12
 " Set to relative line number by default
-set relativenumber number
+" set relativenumber number
 " Map H and L to navigate between tabs
 nnoremap H gT
 nnoremap L gt
