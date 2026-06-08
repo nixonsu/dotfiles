@@ -8,7 +8,7 @@
 	co = checkout
 	c = commit
 	ca = commit -a
-	p = pull
+	pl = pull
 	ps = push
 	st = stash
 	a = add
