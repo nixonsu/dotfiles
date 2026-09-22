@@ -1,8 +1,8 @@
 [user]
 	name = nixonsu
 	email = nixon.s.uch@gmail.com
-[includeIf "gitdir:~/development/"]
- 	path = ~/development/.gitconfig
+[includeIf "gitdir:~/dev/"]
+ 	path = ~/dev/.gitconfig
 [alias]
 	s = status -s
 	co = checkout

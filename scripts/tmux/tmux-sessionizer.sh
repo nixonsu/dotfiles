@@ -7,8 +7,8 @@ else
   selected=$(
     {
       printf '%s\n' "${HOME}"
-			printf 'development\n'
-      find ~/repos ~/development ~/development/payroll-core -mindepth 1 -maxdepth 1 -type d
+			printf 'dev\n'
+      find ~/repos ~/dev -mindepth 1 -maxdepth 1 -type d
     } | sed "s|^$HOME/||" | fzf
   )
   if [[ -n "$selected" ]]; then

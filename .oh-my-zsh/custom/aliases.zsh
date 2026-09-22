@@ -32,8 +32,6 @@ alias sl='pmset sleepnow'
 alias ds='sudo pmset disablesleep 1'
 alias es='sudo pmset disablesleep 0'
 
-alias vim='nvim'
-
 # Tree
 alias t='tree'
 alias t1='tree -L 1'

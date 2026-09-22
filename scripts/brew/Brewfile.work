@@ -15,17 +15,16 @@ brew "yarn"
 brew "uv"
 brew "tree"
 brew "gh"
+brew "neovim"
 
 # Apps
-cask "alacritty"
+# cask "alacritty"
 cask "obsidian"
-cask "dropbox"
 
 # App utils
 cask "karabiner-elements"
 cask "raycast"
 cask "shottr"
-cask "bluesnooze"
 cask "scroll-reverser"
 cask "homerow"
 
