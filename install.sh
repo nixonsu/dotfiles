@@ -24,8 +24,6 @@ if [[ $OS == "Darwin" ]]; then
 	brew install \
 		tmux \
 		git-delta \
-		diff-so-fancy \
-		git-lfs \
 		gitleaks \
 		lazygit \
 		lazydocker \
@@ -57,11 +55,9 @@ elif [[ $OS == "Linux" ]]; then
 		export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 	fi
 
-	nix-env -iA nixpkgs.diff-so-fancy \
-                nixpkgs.btop \
+	nix-env -iA nixpkgs.btop \
                 nixpkgs.gh \
                 nixpkgs.gitleaks \
-                nixpkgs.git-lfs \
                 nixpkgs.tmux \
                 nixpkgs.delta \
                 nixpkgs.lazygit \
