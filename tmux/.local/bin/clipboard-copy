@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ -n "${WAYLAND_DISPLAY:-}" ]] && command -v wl-copy >/dev/null 2>&1; then
+  exec wl-copy
+elif [[ -n "${DISPLAY:-}" ]] && command -v xclip >/dev/null 2>&1; then
+  exec xclip -selection clipboard -in
+else
+  echo 'No desktop clipboard available (requires Wayland/wl-copy or X11/xclip).' >&2
+  exit 1
+fi
