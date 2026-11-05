@@ -1,5 +1,8 @@
 # Dotfiles
 
+> [!WARNING]  
+> **Deprecated:** I found there was no straightforward way to remove repositories cloned using the bare approach. I've since migrated to use a GNU stow based approach instead which allows me to easily delete this folder.
+
 Dotfiles using git bare repository approach as seen in: https://www.atlassian.com/git/tutorials/dotfiles
 
 ## Getting Started
