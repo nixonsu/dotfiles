@@ -1,11 +1,12 @@
 ------------------------------PLUGINS------------------------------
 vim.pack.add({
-	{ src = "https://github.com/catppuccin/nvim.git" },
-	{ src = "https://github.com/echasnovski/mini.pick.git" },
-	{ src = "https://github.com/stevearc/oil.nvim.git" },
-	{ src = "https://github.com/neovim/nvim-lspconfig.git" },
-	{ src = "https://github.com/mason-org/mason.nvim.git" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter.git" }
+    { src = "https://github.com/catppuccin/nvim.git" },
+    { src = "https://github.com/echasnovski/mini.pick.git" },
+    { src = "https://github.com/stevearc/oil.nvim.git" },
+    { src = "https://github.com/neovim/nvim-lspconfig.git" },
+    { src = "https://github.com/mason-org/mason.nvim.git" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter.git" },
+    { src = "https://github.com/OXY2DEV/markview.nvim" }
 })
 
 require("oil").setup()
