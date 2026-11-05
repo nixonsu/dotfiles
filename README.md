@@ -1,6 +1,6 @@
 # Dotfiles
 
-My development environment for macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). The installer also supports Linux with Nix.
+My development environment for macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). For Ubuntu, use the `linux` branch. This branch installs macOS packages with Homebrew.
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ My development environment for macOS, managed with [GNU Stow](https://www.gnu.or
    ./install.sh
    ```
 
-   The installer installs packages, oh-my-zsh, Powerlevel10k, shell plugins and the tmux plugin manager; links the Stow packages into `~`; enables the gitleaks pre-push hook; and sets zsh as the default shell. It simulates Stow before creating links and leaves conflicting files intact. On Linux, install Nix first instead of Homebrew.
+   The installer installs packages, oh-my-zsh, Powerlevel10k, shell plugins and the tmux plugin manager; links the Stow packages into `~`; enables the gitleaks pre-push hook; and sets zsh as the default shell. It simulates Stow before creating links and leaves conflicting files intact.
 
 4. Restart the shell and install tmux plugins as described below.
 

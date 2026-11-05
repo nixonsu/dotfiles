@@ -5,77 +5,37 @@
 set -euox pipefail
 IFS=$'\n\t'
 
-OS="$(uname -s)"
+if [[ "$(uname -s)" != "Darwin" ]]; then
+  echo 'This installer supports macOS only. Use the linux branch for Ubuntu.' >&2
+  exit 1
+fi
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 
-# Step 1:
-### Operating system level packages can be installed by Ubuntu or via Nix (or both)
-###
-### a. Installation of packages via Ubuntu
-###
-###    sudo apt-get update && sudo apt-get -y install btop
-###
-### b. Installation of packages via Nix (identify the package name via https://search.nixos.org/packages)
-###
-###    nix-env -iA nixpkgs.btop
+# Install macOS packages with Homebrew.
+brew install \
+	tmux \
+	git-delta \
+	gitleaks \
+	lazygit \
+	lazydocker \
+	fd \
+	ripgrep \
+	fzf \
+	k9s \
+	pgweb \
+	nvm \
+	yarn \
+	uv \
+	stow \
+	tree \
+	gh \
+	neovim
 
-if [[ $OS == "Darwin" ]]; then
-
-	brew install \
-		tmux \
-		git-delta \
-		gitleaks \
-		lazygit \
-		lazydocker \
-		fd \
-		ripgrep \
-		fzf \
-		k9s \
-		pgweb \
-		nvm \
-		yarn \
-		uv \
-		stow \
-		tree \
-		gh \
-		neovim
-
-	brew install --cask \
-		obsidian \
-		karabiner-elements \
-		scroll-reverser \
-		font-jetbrains-mono-nerd-font
-
-elif [[ $OS == "Linux" ]]; then
-
-	# Nix-built binaries
-	# (perl for stow, bash) ship their own glibc and don't look in /usr/lib/locale.
-	# Use the system locale archive when it is available.
-	if [[ -f /usr/lib/locale/locale-archive ]]; then
-		export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
-	fi
-
-	nix-env -iA nixpkgs.btop \
-                nixpkgs.gh \
-                nixpkgs.gitleaks \
-                nixpkgs.tmux \
-                nixpkgs.delta \
-                nixpkgs.lazygit \
-                nixpkgs.lazydocker \
-                nixpkgs.fd \
-                nixpkgs.ripgrep \
-                nixpkgs.fzf \
-                nixpkgs.k9s \
-                nixpkgs.yarn \
-                nixpkgs.uv \
-                nixpkgs.stow \
-                nixpkgs.tree
-
-    # The default channel's neovim is too old for vim.pack (needs ›= 0.12), so
-    # install it from a newer nixpkgs. nix-env skips the build if it's current.
-    nix-env -f https://github.com/NixOS/nixpkgs/archive/nixos-26.05.tar.gz -iA neovim
-
-fi
+brew install --cask \
+	obsidian \
+	karabiner-elements \
+	scroll-reverser \
+	font-jetbrains-mono-nerd-font
 
 # Install oh-my-zsh
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
@@ -145,5 +105,5 @@ fi
 
 # Step 5:
 # Set zsh as default shell
-chsh -s /usr/bin/zsh
+chsh -s /bin/zsh
 
