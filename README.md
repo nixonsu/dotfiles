@@ -66,6 +66,10 @@ git push
 
 ## Details
 
+### Agents
+
+- Shared instructions live in `~/.agents/AGENTS.md`. Claude Code imports them from `~/.claude/CLAUDE.md` so Claude-only notes can be added there later; Codex follows a symlink at `~/.codex/AGENTS.md` because it does not support `@` imports.
+
 ### Tmux
 
 I use tmux to ensure sessions are persisted even when my local shell is disconnected for whatever reason. It's also a great tool to organise my workspace. To set up tmux with my plugins, follow the `Installing plugins` section.
