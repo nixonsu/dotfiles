@@ -39,6 +39,7 @@ Each package mirrors paths under the home directory. For example, `git/.gitconfi
 | `git`, `gh` | Git and GitHub CLI |
 | `alacritty`, `karabiner` | Terminal and keyboard mappings |
 | `editorconfig`, `rg` | Editor defaults and ripgrep |
+| `agents` | Global agent configs for `.agents`, `.claude`, and `.codex` |
 
 
 To preview or relink one package:

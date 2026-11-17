@@ -78,6 +78,7 @@ fi
 STOW_PACKAGES=(
   zsh
   alacritty
+  agents
   editorconfig
   gh
   git

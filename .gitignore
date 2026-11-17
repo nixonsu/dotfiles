@@ -1,2 +1,20 @@
-/codex/.codex/skills/.system/
 .DS_Store
+
+# Agent runtime, caches, and secrets
+/agents/.agents/.skill-lock.json
+/agents/.claude/projects/
+/agents/.claude/todos/
+/agents/.claude/debug/
+/agents/.claude/statsig/
+/agents/.claude/file-history/
+/agents/.claude/history.jsonl
+/agents/.claude/ide/
+/agents/.claude/shell-snapshots/
+/agents/.codex/auth.json
+/agents/.codex/history.jsonl
+/agents/.codex/sessions/
+/agents/.codex/log/
+/agents/.codex/logs/
+/agents/.codex/tmp/
+/agents/.codex/cache/
+/agents/.codex/skills/.system/
